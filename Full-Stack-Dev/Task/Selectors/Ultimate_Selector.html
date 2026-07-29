@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 20 - Ultimate CSS Selectors Challenge</title>
+
+    <style>
+        /* Universal Selector */
+        * {
+            border: 1px solid lightgray;
+            padding: 5px;
+            margin: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Element Selector */
+        h1, h2 {
+            color: blue;
+        }
+
+        /* Class Selector */
+        .card {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        /* ID Selector */
+        #title {
+            color: darkred;
+            text-align: center;
+            background-color: lightyellow;
+        }
+
+        /* Attribute Selector */
+        input[type="email"] {
+            background-color: lightblue;
+        }
+
+        /* Descendant Selector */
+        .card p {
+            color: green;
+        }
+
+        /* Child Selector */
+        .card > p {
+            font-weight: bold;
+        }
+
+        /* Hover */
+        button:hover {
+            background-color: orange;
+            color: white;
+        }
+
+        /* Focus */
+        input:focus {
+            border: 3px solid red;
+            outline: none;
+        }
+
+        /* ::before */
+        .card h2::before {
+            content: "★ ";
+            color: red;
+        }
+
+        /* ::after */
+        button::after {
+            content: " ✔";
+            color: green;
+        }
+
+        /* ::first-letter */
+        p::first-letter {
+            font-size: 30px;
+            color: purple;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Heading -->
+    <h1 id="title">Ultimate CSS Selectors Challenge</h1>
+    <!-- Card 1 -->
+    <div class="card">
+        <h2>Card One</h2>
+        <p>This is the first direct paragraph inside card one.</p>
+        <div>
+            <p>This paragraph is inside a div.</p>
+        </div>
+        <button>Click Me</button>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+        <h2>Card Two</h2>
+        <p>This is the first direct paragraph inside card two.</p>
+        <div>
+            <p>This paragraph is inside a div.</p>
+        </div>
+        <button>Submit</button>
+    </div>
+    <!-- Inputs -->
+    <h2>Input Fields</h2>
+    <input type="text" placeholder="Enter Name"><br><br>
+    <input type="email" placeholder="Enter Email"><br><br>
+    <input type="password" placeholder="Enter Password"><br><br>
+    <!-- Links -->
+    <a href="https://www.google.com" target="_blank">Google</a><br><br>
+    <a href="#">Home</a>
+</body>
+</html>
