@@ -1,0 +1,601 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    overflow-x:hidden;
+}
+.hero{
+    width:100%;
+    height:100vh;
+    position:relative;
+    background-image:url("Foodie_Image/Backgroung_Red.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+/* Red Overlay */
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-image:url("Foodie_Image/Backgroung_Red.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    z-index:1;
+}
+nav{
+    width:100%;
+    position:absolute;
+    top:35px;
+    left:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    z-index:3;
+}
+/* Logo */
+.logo{
+    color:#fff;
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:30px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.logo i{
+    font-size:28px;
+}
+/* Menu */
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:40px;
+}
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+}
+/* Hero Content */
+.content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-40%);
+    text-align:center;
+    color:white;
+    z-index:3;
+}
+.content h1{
+    font-family:'Pacifico',cursive;
+    font-size:140px;
+    font-weight:400;
+    line-height:1;
+    margin-bottom:30px;
+}
+.content p{
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:35px;
+}
+.content button{
+    width:250px;
+    height:60px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:#ff5c5c;
+    font-size:24px;
+    font-weight:700;
+}
+.content button:hover{
+
+    background:#ff5c5c;
+    color:white;
+}
+/*Section-2 Popular section.*/
+.popular{
+    width:100%;
+    min-height:100vh;
+    background:url("Foodie_Image/Background_White.png");
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+/* Content */
+.popular-content{
+    position:relative;
+    z-index:2;
+    width:90%;
+    max-width:1200px;
+    text-align:center;
+}
+/* Heading */
+.popular-content h2{
+    font-family:'Pacifico',cursive;
+    font-size:72px;
+    color:#ff5a5f;
+    margin-bottom:20px;
+}
+/* Paragraph */
+.popular-text{
+    width:70%;
+    margin:auto;
+    font-size:22px;
+    color:#444;
+    line-height:1.7;
+    margin-bottom:80px;
+}
+/* Cards */
+.popular-cards{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+/* Card */
+.card{
+    flex:1;
+    min-width:280px;
+    text-align:center;
+}
+/* Circle Image */
+.card img{
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    object-fit:cover;
+    box-shadow:0 12px 25px rgba(0,0,0,.2);
+}
+/* Heading */
+.card h3{
+    font-family:'Pacifico',cursive;
+    color:#ff5a5f;
+    font-size:48px;
+    margin-top:25px;
+}
+/* Text */
+.card p{
+    color:#444;
+    font-size:20px;
+    line-height:1.6;
+    margin-top:15px;
+    width:85%;
+    margin-left:auto;
+    margin-right:auto;
+}
+/*3rd Section*/
+.statistics{
+    width:100%;
+    min-height:100vh;
+    background:url("./Foodie_Image/2ndRed_Background.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+/* Content */
+.stats-content{
+    position:relative;
+    z-index:2;
+    width:90%;
+    max-width:1200px;
+    text-align:center;
+}
+/* Heading */
+.stats-content h2{
+    font-family:'Pacifico',cursive;
+    font-size:75px;
+    color:#fff;
+    margin-bottom:20px;
+}
+/* Paragraph */
+.stats-text{
+    width:70%;
+    margin:auto;
+    color:#fff;
+    font-size:22px;
+    line-height:1.7;
+    margin-bottom:80px;
+}
+/* Circle Container */
+.stats-box{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:40px;
+}
+/* Circle */
+.circle{
+    width:250px;
+    height:250px;
+    border:5px dashed #fff;
+    border-radius:50%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+/* Number */
+.circle h3{
+    font-size:70px;
+    color:#fff;
+    font-weight:700;
+}
+/* Text */
+.circle span{
+    font-size:34px;
+    color:#fff;
+    margin-top:10px;
+}
+/*Section 4 OUR MENU*/
+.menu-section{
+    width:100%;
+    padding:90px 8%;
+    background:#f8efd5;
+}
+/* Heading */
+.menu-heading{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.menu-heading h2{
+    font-family:'Pacifico',cursive;
+    font-size:70px;
+    color:#ff5a5f;
+    margin-bottom:20px;
+}
+.menu-heading p{
+    width:60%;
+    margin:auto;
+    color:#444;
+    font-size:22px;
+    line-height:1.6;
+}
+/* Grid */
+.menu-container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr); 
+    gap:60px;
+}
+/* Card */
+.menu-card{
+    display:flex;
+    align-items:flex-start;
+    gap:25px;
+}
+/* Icon */
+.menu-card img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+}
+/* Heading */
+.menu-info h3{
+    font-family:'Pacifico',cursive;
+    color:#ff5a5f;
+    font-size:40px;
+    margin-bottom:12px;
+}
+/* Description */
+.menu-info p{
+    color:#444;
+    font-size:20px;
+    line-height:1.6;
+}
+/* 4th Section*/
+.delicious-section{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    background:#f8efd5;
+}
+/* Left Side */
+.delicious-image{
+    width:50%;
+    height:100vh;
+}
+.delicious-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+/* Right Side */
+.delicious-content{
+    width:50%;
+    padding:0 80px;
+}
+.delicious-content h2{
+    font-family:'Pacifico',cursive;
+    font-size:72px;
+    color:#ff5a5f;
+    margin-bottom:25px;
+}
+.delicious-content p{
+    font-size:22px;
+    color:#444;
+    line-height:1.7;
+    margin-bottom:40px;
+}
+/* Button */
+.delicious-content button{
+    width:260px;
+    height:65px;
+    border:none;
+    border-radius:50px;
+    background:#ff5a5f;
+    color:white;
+    font-size:22px;
+    font-weight:600;
+}
+/* 5th Section Package Menu */
+.package-section{
+    width:100%;
+    padding:90px 80px;
+    background:#f8efd5;
+}
+/* Heading */
+.package-section h2{
+    text-align:center;
+    font-family:'Pacifico',cursive;
+    font-size:72px;
+    color:#ff5a5f;
+    margin-bottom:25px;
+}
+/* Paragraph */
+.package-text{
+    width:60%;
+    margin:auto;
+    text-align:center;
+    font-size:22px;
+    color:#444;
+    line-height:1.6;
+    margin-bottom:70px;
+}
+/* Cards */
+.package-container{
+    display:flex;
+    justify-content:space-between;
+}
+/* Card */
+.package-card{
+    width:360px;
+    background:#fffdf8;
+    border-radius:18px;
+    text-align:center;
+    padding:45px 30px;
+}
+/* Icon */
+.package-card img{
+    width:90px;
+    height:90px;
+    margin-bottom:25px;
+}
+/* Heading */
+.package-card h3{
+    font-family:'Pacifico',cursive;
+    font-size:42px;
+    color:#ff5a5f;
+    margin-bottom:20px;
+}
+/* Description */
+.package-card p{
+    font-size:20px;
+    color:#444;
+    line-height:1.6;
+    margin-bottom:35px;
+}
+/* Price Button */
+.package-card button{
+    width:250px;
+    height:58px;
+    border:none;
+    border-radius:40px;
+    background:#ff5a5f;
+    color:#fff;
+    font-size:28px;
+}
+/* Section 6th Testimonial Section */
+.testimonial-section{
+
+    width:100%;
+    height:100vh;
+
+    background:#f8f8f8;
+
+    position:relative;
+
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+/* Bottom Image */
+
+.testimonial-bg{
+
+    position:absolute;
+
+    bottom:0;
+    left:0;
+
+    width:100%;
+    height:320px;
+
+    background:url("./Foodie_Image/2ndWhite.png");
+    background-size:cover;
+    background-position:center;
+    opacity:.68;
+}
+/* Content */
+.testimonial-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    width:900px;
+}
+/* Chef Image */
+.testimonial-content img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:50px;
+}
+/* Paragraph */
+.testimonial-content p{
+    font-size:34px;
+    color:#444;
+    line-height:1.5;
+    margin-bottom:45px;
+    font-weight:500;
+}
+/* Name */
+.testimonial-content h2{
+    font-family:'Pacifico',cursive;
+    font-size:72px;
+    color:#ff5a5f;
+    font-weight:400;
+}
+/* 7th Section Subscribe Section*/
+.subscribe-section{
+    width:100%;
+    height:70vh;
+    background:#f8efd5;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+/* Heading */
+.subscribe-section h2{
+    font-family:'Pacifico',cursive;
+    font-size:80px;
+    color:#ff5a5f;
+    font-weight:400;
+    margin-bottom:30px;
+}
+/* Paragraph */
+.subscribe-section p{
+    width:60%;
+    text-align:center;
+    font-size:22px;
+    color:#444;
+    line-height:1.6;
+    margin-bottom:50px;
+}
+/* Form */
+.subscribe-form{
+    width:700px;
+    height:60px;
+    display:flex;
+    background:#fff;
+    border-radius:50px;
+    overflow:hidden;
+}
+/* Input */
+.subscribe-form input{
+    flex:1;
+    border:none;
+    outline:none;
+    padding:0 30px;
+    font-size:20px;
+    color:#444;
+}
+.subscribe-form input::placeholder{
+    color:#999;
+}
+/* Button */
+.subscribe-form button{
+    width:220px;
+    border:none;
+    background:#ff5a5f;
+    color:#fff;
+    font-size:22px;
+    font-weight:600;
+}
+/* Section 8th Footer*/
+.footer{
+    width:100%;
+    background:#242424;
+    padding:80px 90px;
+    color:#fff;
+}
+/* Container */
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+/* About Section */
+.about{
+    width:340px;
+}
+/* Main Heading */
+.footer-column h2{
+    font-family:'Pacifico',cursive;
+    font-size:46px;
+    font-weight:400;
+    margin-bottom:25px;
+}
+/* Other Headings */
+.footer-column h3{
+    font-family:'Pacifico',cursive;
+    font-size:34px;
+    font-weight:400;
+    margin-bottom:25px;
+}
+/* Paragraph */
+.footer-column p{
+    font-size:20px;
+    color:#ddd;
+    line-height:1.7;
+}
+/* List */
+.footer-column ul{
+    list-style:none;
+}
+.footer-column ul li{
+    margin-bottom:18px;
+    font-size:20px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+/* Links */
+.footer-column ul li a{
+    text-decoration:none;
+    color:#ddd;
+}
+/* Icons */
+.footer-column ul li i{
+    width:34px;
+    height:34px;
+    background:#fff,
+    color:#242424;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:16px;
+}
