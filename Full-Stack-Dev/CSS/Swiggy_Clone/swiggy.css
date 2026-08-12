@@ -580,3 +580,402 @@ body {
 .store-images img{
     width:290px;
 }
+/* Mobile Responsive */
+@media (max-width: 767px) {
+    body {
+        overflow-x: hidden;
+    }
+    /* Navbar */
+    .topbar {
+        padding: 16px 20px;
+        flex-direction: row;
+    }
+    .logo {
+        font-size: 19px;
+        gap: 7px;
+    }
+    .logo-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+    }
+    .nav {
+        gap: 8px;
+    }
+    .nav a {
+        display: none;
+    }
+    .btn {
+        padding: 9px 13px;
+        border-radius: 9px;
+        font-size: 12px;
+    }
+    .btn-outline {
+        display: none;
+    }
+    /*Hero Section */
+    .page {
+        min-height: auto;
+    }
+    .side-img {
+        display: none;
+    }
+    .hero {
+        padding: 25px 18px 20px;
+    }
+    .hero h1 {
+        margin: 30px auto 25px;
+        font-size: 30px;
+        line-height: 1.2;
+        max-width: 500px;
+    }
+    /*Search Boxes Section*/
+    .search-boxes {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    .search-box {
+        width: 100%;
+        height: 48px;
+    }
+    .location-box,
+    .search-main {
+        width: 100%;
+    }
+    /* Main-Cards */
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        margin-top: 10px;
+    }
+    .card {
+        width: 100%;
+        max-width: 430px;
+        height: 260px;
+        border-radius: 28px;
+        padding: 25px 22px;
+    }
+    .card h2 {
+        font-size: 27px;
+    }
+    .card p {
+        font-size: 16px;
+        margin-top: 7px;
+    }
+    .card .offer {
+        margin-top: 12px;
+        padding: 8px 11px;
+        font-size: 13px;
+    }
+    .card img {
+        width: 175px;
+    }
+    .arrow {
+        left: 20px;
+        bottom: 20px;
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+    /* Scroll-Bar */
+    .bottom-scrollbar {
+        padding: 20px 18px 15px;
+    }
+    .scroll-track {
+        height: 9px;
+    }
+    .scroll-thumb {
+        width: 30px;
+        height: 13px;
+    }
+/* Food Section */
+    .food-section {
+        padding: 45px 0;
+    }
+    .food-container {
+        width: 92%;
+    }
+    .food-container h2 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 30px;
+    }
+    .food-items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 15px;
+    }
+    .food-card img {
+        width: 125px;
+        height: 125px;
+    }
+    .food-card p {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+/* Grocery Section */
+    .grocery-section {
+        padding: 45px 0;
+    }
+    .grocery-container {
+        width: 92%;
+    }
+    .grocery-container h2 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 30px;
+    }
+    .grocery-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 15px;
+    }
+    .grocery-card {
+        width: 100%;
+    }
+    .grocery-card img {
+        width: 100%;
+        height: 180px;
+        border-radius: 20px;
+        padding: 12px;
+    }
+    .grocery-card p {
+        margin-top: 12px;
+        font-size: 19px;
+        line-height: 25px;
+    }
+/* Restaurant Card Section */
+    .restaurant-section {
+        padding: 45px 0;
+    }
+    .restaurant-container {
+        width: 92%;
+    }
+    .restaurant-container h2 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 30px;
+    }
+    .restaurant-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .restaurant-card {
+        width: 100%;
+        max-width: 480px;
+        height: auto;
+        border-radius: 20px;
+    }
+    .restaurant-card img {
+        height: 210px;
+    }
+    .restaurant-info {
+        padding: 16px;
+    }
+    .restaurant-info h3 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+    .details {
+        font-size: 15px;
+        gap: 10px;
+    }
+    .details span:last-child {
+        text-align: right;
+    }
+    .location {
+        font-size: 14px;
+        gap: 10px;
+    }
+    .location span:last-child {
+        white-space: nowrap;
+    }
+    .restaurant-info .offer {
+        padding: 11px;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+/* App Banner Image */
+    .app-banner-section {
+        padding: 35px 0;
+    }
+    .app-banner-container {
+        width: 92%;
+    }
+    .app-banner-container img {
+        border-radius: 15px;
+    }
+/* Cities-box */
+    .cities-section {
+        padding: 45px 0;
+    }
+    .cities-container {
+        width: 92%;
+    }
+    .cities-container h2 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 25px;
+    }
+    .cities-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .city-box {
+        width: 100%;
+        height: 85px;
+        border-radius: 14px;
+        padding: 10px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .show-more {
+        font-size: 15px;
+    }
+/* main footer */
+    .footer {
+        margin-top: 30px;
+    }
+    .footer-container {
+        width: 92%;
+        padding: 45px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 20px;
+    }
+    .footer-logo {
+        grid-column: 1 / -1;
+    }
+    .footer-logo img {
+        width: 170px;
+    }
+    .footer-logo p {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .footer-column {
+        width: 100%;
+    }
+    .footer-column h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .footer-column a {
+        font-size: 15px;
+        margin-bottom: 11px;
+    }
+    .footer-column select {
+        width: 140px;
+        height: 42px;
+        font-size: 15px;
+        margin-top: 8px;
+    }
+    .social-icons {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .social-icons i {
+        font-size: 22px;
+    }
+/* footer */
+    .footer-bottom {
+        width: 92%;
+        padding: 30px 0;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .footer-bottom h2 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+    .store-images {
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+    }
+    .store-images img {
+        width: 145px;
+    }
+}
+/* small mobile */
+@media (max-width: 400px) {
+    .topbar {
+        padding: 14px 15px;
+    }
+    .logo {
+        font-size: 17px;
+    }
+    .logo-icon {
+        width: 29px;
+        height: 29px;
+    }
+    .btn-dark {
+        padding: 8px 11px;
+        font-size: 11px;
+    }
+    .hero {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .hero h1 {
+        font-size: 27px;
+    }
+    .card {
+        height: 240px;
+    }
+    .card h2 {
+        font-size: 24px;
+    }
+    .card img {
+        width: 155px;
+    }
+    .food-card img {
+        width: 110px;
+        height: 110px;
+    }
+    .food-card p {
+        font-size: 18px;
+    }
+    .grocery-card img {
+        height: 155px;
+    }
+    .grocery-card p {
+        font-size: 17px;
+    }
+    .restaurant-card img {
+        height: 190px;
+    }
+    .restaurant-info h3 {
+        font-size: 21px;
+    }
+    .details {
+        font-size: 13px;
+    }
+    .location {
+        font-size: 12px;
+    }
+    .restaurant-info .offer {
+        font-size: 13px;
+    }
+    .city-box {
+        height: 78px;
+        font-size: 13px;
+    }
+    .footer-container {
+        gap: 30px 15px;
+    }
+    .footer-column h3 {
+        font-size: 18px;
+    }
+    .footer-column a {
+        font-size: 14px;
+    }
+    .store-images img {
+        width: 130px;
+    }
+}
