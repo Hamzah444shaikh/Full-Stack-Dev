@@ -4,18 +4,18 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 body {
   overflow-x: hidden;
 }
-
+.mobile-user-icon {
+    display: none;
+}
 .page {
   position: relative;
   min-height: 100vh;
   background: #ff5a00;
   color: #fff;
 }
-
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -24,7 +24,6 @@ body {
   position: relative;
   z-index: 2;
 }
-
 .logo {
   display: flex;
   align-items: center;
@@ -32,7 +31,6 @@ body {
   font-size: 22px;
   font-weight: 700;
 }
-
 .logo-icon {
   width: 38px;
   height: 38px;
@@ -43,38 +41,32 @@ body {
   place-items: center;
   font-weight: 900;
 }
-
 .nav {
   display: flex;
   align-items: center;
   gap: 26px;
 }
-
 .nav a {
   color: #fff;
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
 }
-
 .btn {
   border: none;
   padding: 12px 24px;
   border-radius: 12px;
   font-weight: 700;
 }
-
 .btn-outline {
   background: transparent;
   border: 1px solid #fff;
   color: #fff;
 }
-
 .btn-dark {
   background: #111;
   color: #fff;
 }
-
 .side-img {
   position: absolute;
   top: 70px;
@@ -83,22 +75,18 @@ body {
   z-index: 1;
   pointer-events: none;
 }
-
 .left-img {
   left: -20px;
 }
-
 .right-img {
   right: -20px;
 }
-
 .hero {
   position: relative;
   z-index: 2;
   padding: 40px 60px 30px;
   text-align: center;
 }
-
 .hero h1 {
   max-width: 900px;
   margin: 55px auto 28px;
@@ -106,14 +94,12 @@ body {
   line-height: 1.15;
   font-weight: 800;
 }
-
 .search-boxes {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-bottom: 48px;
 }
-
 .search-box {
   height: 44px;
   background: #fff;
@@ -124,23 +110,19 @@ body {
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
   overflow: hidden;
 }
-
 .location-box {
   width: 230px;
   padding: 0 14px;
   gap: 10px;
 }
-
 .search-main {
   width: 360px;
   padding: 0 14px;
 }
-
 .search-box i {
   color: #777;
   font-size: 15px;
 }
-
 .search-box input {
   border: none;
   outline: none;
@@ -149,11 +131,9 @@ body {
   color: #333;
   background: transparent;
 }
-
 .search-main input {
   flex: 1;
 }
-
 .cards {
   display: flex;
   justify-content: center;
@@ -161,7 +141,6 @@ body {
   margin-top: 10px;
   flex-wrap: nowrap;
 }
-
 .card {
   width: 430px;
   height: 385px;
@@ -173,21 +152,18 @@ body {
   overflow: hidden;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
 }
-
 .card h2 {
   font-size: 42px;
   line-height: 1;
   font-weight: 900;
   color: #3a3a3a;
 }
-
 .card p {
   margin-top: 10px;
   font-size: 24px;
   color: #8a8a8a;
   font-weight: 500;
 }
-
 .offer {
   display: inline-block;
   margin-top: 18px;
@@ -198,7 +174,6 @@ body {
   font-weight: 800;
   font-size: 18px;
 }
-
 .card img {
   position: absolute;
   right: 0;
@@ -206,7 +181,6 @@ body {
   width: 240px;
   height: auto;
 }
-
 .arrow {
   position: absolute;
   left: 28px;
@@ -220,11 +194,9 @@ body {
   place-items: center;
   font-size: 24px;
 }
-
 .bottom-scrollbar {
   padding: 30px 20px 18px;
 }
-
 .scroll-track {
   width: 100%;
   height: 14px;
@@ -232,7 +204,6 @@ body {
   border-radius: 999px;
   position: relative;
 }
-
 .scroll-thumb {
   position: absolute;
   left: 0;
@@ -243,8 +214,7 @@ body {
   background: #bfbfbf;
   border-radius: 999px;
 }
-<!--section2-->
-
+/* section 2 */
 .food-section{
     width:100%;
     background:#ffffff;
@@ -291,7 +261,7 @@ body {
     font-weight:500;
     color:#444;
 }
-<!--section3-->
+/* section 3 */
 .grocery-section{
     width:100%;
     background:#ffffff;
@@ -340,33 +310,28 @@ body {
     line-height:38px;
 }
 /*section 4 Restaurant*/
-
 .restaurant-section{
     width:100%;
     padding:70px 0;
     background:#fff;
 }
-
 .restaurant-container{
     width:95%;
     max-width:1500px;
     margin:auto;
 }
-
 .restaurant-container h2{
     font-size:48px;
     font-weight:700;
     color:#222;
     margin-bottom:40px;
 }
-
 .restaurant-cards{
     display:flex;
     justify-content:center;
     gap:25px;
     flex-wrap:wrap;
 }
-
 .restaurant-card{
 
     width:480px;
@@ -381,17 +346,14 @@ body {
     height:285px;
     object-fit:cover;
 }
-
 .restaurant-info{
     padding:20px;
 }
-
 .restaurant-info h3{
     font-size:34px;
     margin-bottom:18px;
     color:#222;
 }
-
 .details{
     display:flex;
     justify-content:space-between;
@@ -399,7 +361,6 @@ body {
     color:#555;
     margin-bottom:12px;
 }
-
 .location{
     display:flex;
     justify-content:space-between;
@@ -407,7 +368,6 @@ body {
     color:#666;
     margin-bottom:20px;
 }
-
 .offer{
     background:#18b66c;
     color:#fff;
@@ -497,7 +457,6 @@ body {
     background:#f2f2f7;
     margin-top:80px;
 }
-
 .footer-container{
     width:90%;
     max-width:1500px;
@@ -580,12 +539,12 @@ body {
 .store-images img{
     width:290px;
 }
-/* Mobile Responsive */
+/* Responsive-Code */
 @media (max-width: 767px) {
     body {
         overflow-x: hidden;
     }
-    /* Navbar */
+    /* ---------- TOP NAVBAR ---------- */
     .topbar {
         padding: 16px 20px;
         flex-direction: row;
@@ -606,14 +565,20 @@ body {
         display: none;
     }
     .btn {
-        padding: 9px 13px;
-        border-radius: 9px;
-        font-size: 12px;
-    }
-    .btn-outline {
         display: none;
     }
-    /*Hero Section */
+    .mobile-user-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        font-size: 20px;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    /* ---------- HERO ---------- */
     .page {
         min-height: auto;
     }
@@ -629,7 +594,7 @@ body {
         line-height: 1.2;
         max-width: 500px;
     }
-    /*Search Boxes Section*/
+    /* ---------- SEARCH ---------- */
     .search-boxes {
         flex-direction: column;
         align-items: stretch;
@@ -644,7 +609,7 @@ body {
     .search-main {
         width: 100%;
     }
-    /* Main-Cards */
+    /* ---------- MAIN CARDS ---------- */
     .cards {
         flex-direction: column;
         align-items: center;
@@ -680,7 +645,7 @@ body {
         height: 44px;
         font-size: 18px;
     }
-    /* Scroll-Bar */
+    /* ---------- SCROLL BAR ---------- */
     .bottom-scrollbar {
         padding: 20px 18px 15px;
     }
@@ -691,7 +656,7 @@ body {
         width: 30px;
         height: 13px;
     }
-/* Food Section */
+    /* Food section */
     .food-section {
         padding: 45px 0;
     }
@@ -715,7 +680,7 @@ body {
         margin-top: 10px;
         font-size: 20px;
     }
-/* Grocery Section */
+    /* grocery section */
     .grocery-section {
         padding: 45px 0;
     }
@@ -746,7 +711,7 @@ body {
         font-size: 19px;
         line-height: 25px;
     }
-/* Restaurant Card Section */
+    /* restaurant section */
     .restaurant-section {
         padding: 45px 0;
     }
@@ -798,7 +763,7 @@ body {
         font-size: 15px;
         margin-bottom: 5px;
     }
-/* App Banner Image */
+    /* app banner image */
     .app-banner-section {
         padding: 35px 0;
     }
@@ -808,7 +773,7 @@ body {
     .app-banner-container img {
         border-radius: 15px;
     }
-/* Cities-box */
+    /*cities  */
     .cities-section {
         padding: 45px 0;
     }
@@ -836,7 +801,7 @@ body {
     .show-more {
         font-size: 15px;
     }
-/* main footer */
+    /* footer section */
     .footer {
         margin-top: 30px;
     }
@@ -881,7 +846,7 @@ body {
     .social-icons i {
         font-size: 22px;
     }
-/* footer */
+    /* ---------- FOOTER BOTTOM ---------- */
     .footer-bottom {
         width: 92%;
         padding: 30px 0;
@@ -901,81 +866,446 @@ body {
     .store-images img {
         width: 145px;
     }
+    .signin-nav-btn {
+
+        display: none;
+    }
+
+
+    /* Mobile user icon */
+
+    .mobile-user-icon {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        width: 38px;
+
+        height: 38px;
+
+        border-radius: 50%;
+
+        font-size: 20px;
+
+        color: #fff;
+
+        cursor: pointer;
+    }
+
+
+    /* Mobile Sign In panel */
+
+    .signin-box {
+
+        width: 100%;
+
+        max-width: 430px;
+
+        padding: 55px 25px 30px;
+    }
+
+
+    .signin-form {
+
+        margin-top: 25px;
+    }
+
+
+    .signin-form h1 {
+
+        font-size: 26px;
+    }
+
+
+    .signin-form .subtitle {
+
+        font-size: 13px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .input-box input {
+
+        height: 50px;
+    }
+
+
+    .signin-submit {
+
+        height: 50px;
+    }
+    
 }
-/* small mobile */
-@media (max-width: 400px) {
-    .topbar {
-        padding: 14px 15px;
-    }
-    .logo {
-        font-size: 17px;
-    }
-    .logo-icon {
-        width: 29px;
-        height: 29px;
-    }
-    .btn-dark {
-        padding: 8px 11px;
-        font-size: 11px;
-    }
-    .hero {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    .hero h1 {
-        font-size: 27px;
-    }
-    .card {
-        height: 240px;
-    }
-    .card h2 {
-        font-size: 24px;
-    }
-    .card img {
-        width: 155px;
-    }
-    .food-card img {
-        width: 110px;
-        height: 110px;
-    }
-    .food-card p {
-        font-size: 18px;
-    }
-    .grocery-card img {
-        height: 155px;
-    }
-    .grocery-card p {
-        font-size: 17px;
-    }
-    .restaurant-card img {
-        height: 190px;
-    }
-    .restaurant-info h3 {
-        font-size: 21px;
-    }
-    .details {
-        font-size: 13px;
-    }
-    .location {
-        font-size: 12px;
-    }
-    .restaurant-info .offer {
-        font-size: 13px;
-    }
-    .city-box {
-        height: 78px;
-        font-size: 13px;
-    }
-    .footer-container {
-        gap: 30px 15px;
-    }
-    .footer-column h3 {
-        font-size: 18px;
-    }
-    .footer-column a {
-        font-size: 14px;
-    }
-    .store-images img {
-        width: 130px;
-    }
+/* =====================================================
+   SWIGGY SIGN IN
+===================================================== */
+
+
+/* Invisible checkbox */
+
+#check {
+    position: fixed;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
 }
+
+
+/* Sign In navbar button */
+
+.signin-nav-btn {
+    cursor: pointer;
+}
+
+
+/* Overlay */
+
+.signin-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    visibility: hidden;
+
+    opacity: 0;
+
+    z-index: 9999;
+
+    transition: opacity 0.25s ease,
+                visibility 0.25s ease;
+}
+
+
+/* Show overlay */
+
+#check:checked ~ .signin-overlay {
+
+    visibility: visible;
+
+    opacity: 1;
+}
+
+
+/* Sign In Box */
+
+.signin-box {
+
+    width: 430px;
+
+    height: 100vh;
+
+    background: #ffffff;
+
+    padding: 55px 35px 35px;
+
+    position: relative;
+
+    overflow-y: auto;
+
+    transform: translateX(100%);
+
+    transition: transform 0.3s ease;
+
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Slide in */
+
+#check:checked ~ .signin-overlay .signin-box {
+
+    transform: translateX(0);
+}
+
+
+/* Orange top line */
+
+.signin-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 5px;
+
+    background: #ff5200;
+}
+
+
+/* Close button */
+
+.close-btn {
+
+    position: absolute;
+
+    top: 22px;
+
+    right: 25px;
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    color: #282c3f;
+
+    font-size: 22px;
+
+    background: #f5f5f5;
+
+    transition: 0.2s;
+}
+
+
+.close-btn:hover {
+
+    background: #ff5200;
+
+    color: #fff;
+}
+
+
+/* Form */
+
+.signin-form {
+
+    width: 100%;
+
+    margin-top: 30px;
+}
+
+
+/* Heading */
+
+.signin-form h1 {
+
+    font-size: 30px;
+
+    color: #282c3f;
+
+    margin-bottom: 8px;
+
+    font-weight: 700;
+}
+
+
+/* Subtitle */
+
+.signin-form .subtitle {
+
+    color: #686b78;
+
+    font-size: 14px;
+
+    line-height: 20px;
+
+    margin-bottom: 30px;
+}
+
+
+/* Input */
+
+.input-box {
+
+    margin-bottom: 18px;
+}
+
+
+.input-box label {
+
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #282c3f;
+
+    margin-bottom: 7px;
+}
+
+
+.input-box input {
+
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 15px;
+
+    border: 1px solid #d9d9d9;
+
+    border-radius: 6px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    color: #282c3f;
+
+    transition: 0.2s;
+}
+
+
+.input-box input::placeholder {
+
+    color: #93959f;
+}
+
+
+.input-box input:focus {
+
+    border-color: #ff5200;
+
+    box-shadow: 0 0 0 2px rgba(255, 82, 0, 0.08);
+}
+
+
+/* Sign In button */
+
+.signin-submit {
+
+    width: 100%;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #ff5200;
+
+    color: #fff;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    margin-top: 4px;
+
+    transition: 0.2s;
+
+    box-shadow: 0 4px 10px rgba(255, 82, 0, 0.20);
+}
+
+
+.signin-submit:hover {
+
+    background: #e94b00;
+
+    box-shadow: 0 6px 15px rgba(255, 82, 0, 0.28);
+}
+
+
+.signin-submit:active {
+
+    transform: scale(0.98);
+}
+
+
+/* Terms */
+
+.terms {
+
+    margin-top: 20px;
+
+    font-size: 11px;
+
+    color: #686b78;
+
+    line-height: 18px;
+}
+
+
+.terms span {
+
+    color: #ff5200;
+
+    font-weight: 600;
+}
+
+
+/* Divider */
+
+.divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 25px 0;
+
+    color: #93959f;
+
+    font-size: 12px;
+}
+
+
+.divider::before,
+.divider::after {
+
+    content: "";
+
+    height: 1px;
+
+    flex: 1;
+
+    background: #eeeeee;
+}
+
+
+/* Create Account */
+
+.create-account {
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: #686b78;
+}
+
+
+.create-account span {
+
+    color: #ff5200;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
