@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe and Space.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+     <link rel="icon" type="image/png" href="./images/websitefavicon.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <style>
+      .search-red {
+        border: 1px solid red;
+      }
+      .search-red::placeholder {
+        color: red;
+        opacity: 1;
+      }
+      .search-red:focus {
+        border-color: red;
+        box-shadow: 0 0 0 0.25rem rgba(255, 0, 0, 0.15);
+      }
+      .red-dropdown {
+        border: 1px solid rgb(209, 19, 19);
+      }
+      .furniture-slide {
+        padding: 40px 100px 60px;
+        min-height: 650px;
+        background-color: white;
+      }
+      .discount {
+        font-size: 30px;
+        font-style: italic;
+        color: rgb(214, 31, 31);
+        margin-bottom: 5px;
+      }
+      .furniture-slide h1 {
+        font-size: 42px;
+        font-weight: 400;
+        line-height: 1;
+        margin-bottom: 35px;
+      }
+      .sofa-img {
+        width: 500px;
+        height: 230px;
+        object-fit: contain;
+        margin-bottom: 25px;
+      }
+      .description {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .price {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .furniture-slide .btn {
+        padding: 12px 20px;
+        border-radius: 0;
+        font-size: 13px;
+      }
+      /* Carousel arrows */
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 15%;
+      }
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        filter: invert(1);
+      }
+      .product-card {
+            width: 300px;
+            border: none;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+        }
+
+        .product-image-wrapper {
+            position: relative;
+            padding: 7px 6px 0;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 248px;
+            object-fit: cover;
+            border-radius: 7px;
+            display: block;
+        }
+
+        .product-body {
+            padding: 8px 8px 12px;
+        }
+
+        .product-title {
+            font-size: 14px;
+            line-height: 21px;
+            color: #555;
+            margin-bottom: 5px;
+
+            /* Two-line ellipsis */
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .rating {
+            color: #f47721;
+            font-size: 18px;
+            letter-spacing: -2px;
+        }
+
+        .rating-count {
+            color: #777;
+            font-size: 12px;
+            margin-left: 5px;
+            letter-spacing: 0;
+        }
+
+        .price {
+            font-size: 19px;
+            font-weight: 500;
+            color: #222;
+        }
+
+        .old-price {
+            color: #888;
+            font-size: 13px;
+            text-decoration: line-through;
+        }
+
+        .discount {
+            color: #35a853;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .news-section {
+            padding: 30px;
+        }
+
+        .news-title {
+            font-size: 30px;
+        }
+
+        .news-line {
+            width: 110px;
+            border-top: 2px solid #ddd;
+            margin: 15px 0 25px;
+        }
+
+        .logo {
+            font-weight: bold;
+            color: #666;
+            font-size: 18px;
+        }
+
+        .news-card {
+            background: #fff8ef;
+            border-radius: 9px;
+            padding: 12px;
+            height: 100%;
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 168px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .news-card h3 {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #111;
+            margin-top: 10px;
+        }
+
+        .news-card p {
+            font-size: 14px;
+            line-height: 1.45;
+            color: #555;
+        }
+
+        .media-btn {
+            border: 1px solid #e85b2a;
+            color: #e85b2a;
+            border-radius: 25px;
+            padding: 8px 18px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        .media-btn:hover {
+            background: #e85b2a;
+            color: white;
+        }
+
+        @media(max-width: 768px) {
+            .news-section {
+                padding: 20px 15px;
+            }
+
+            .news-title {
+                font-size: 24px;
+            }
+        }
+          .video-card {
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+
+        .video-card:hover {
+            transform: scale(1.03);
+        }
+
+        .video-card video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .large-video {
+            height: 450px;
+        }
+
+        .small-video {
+            height: 215px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar starts from here  -->
+     <nav class="navbar navbar-expand-lg  bg-white">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="./images/logo.png" alt="Logo" width="80" height="50"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active text-danger" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-danger" href="aboutus.html">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-danger" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Products
+          </a>
+          <ul class="dropdown-menu red-dropdown">
+            <li><a class="dropdown-item text-danger" href="product.html">Couchs</a></li>
+            <li><a class="dropdown-item text-danger" href="#">Dining Set</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="#">Wardrobes</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-danger" href="testimonial.html">Testimonials</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2 search-red" type="search" placeholder="Search Furniture" aria-label="Search">
+        <button class="btn btn-outline-danger" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+     <!-- Navbar ends from here  -->
+      <!-- 1st section starts from here -->
+       <div id="furnitureCarousel" class="carousel slide" data-bs-ride="carousel">
+
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div class="furniture-slide text-center">
+
+        <p class="discount">%10 Sell</p>
+
+        <h1>Exchange your<br>old furniture</h1>
+
+        <img src="images/sofa1.png" class="sofa-img" alt="Yellow Sofa">
+
+        <p class="description">
+          Save up to $50 for your home office.
+        </p>
+
+        <h5 class="price">$45</h5>
+
+        <button class="btn btn-outline-danger">
+          View Details
+        </button>
+
+      </div>
+    </div>
+
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="furniture-slide text-center">
+
+        <p class="discount">%25 Sell</p>
+
+        <h1>Crafted royal<br>comfort sofa</h1>
+
+        <img src="images/sofa2.png" class="sofa-img" alt="Brown Sofa">
+
+        <p class="description">
+          Experience the elegance of timeless<br>
+          craftsmanship with our Sofa.
+        </p>
+
+        <h5 class="price">$89</h5>
+
+        <button class="btn btn-outline-danger">
+          View Details
+        </button>
+
+      </div>
+    </div>
+
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <div class="furniture-slide text-center">
+
+        <p class="discount">%20 Sell</p>
+
+        <h1>Comfy Sofa<br>Home-Office</h1>
+
+        <img src="images/sofa3.png" class="sofa-img" alt="Green Sofa">
+
+        <p class="description">
+          Comfortable and stylish sofa for your home<br>
+          office.
+        </p>
+
+        <h5 class="price">$50</h5>
+
+        <button class="btn btn-outline-danger">
+          View Details
+        </button>
+
+      </div>
+    </div>
+  </div>
+  <!-- Previous Button -->
+  <button class="carousel-control-prev" type="button"
+          data-bs-target="#furnitureCarousel"
+          data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <!-- Next Button -->
+  <button class="carousel-control-next" type="button"
+          data-bs-target="#furnitureCarousel"
+          data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+       <!-- 1st section Ends here -->
+  <!-- 2nd section starts from here  -->
+   <div class="container py-4">
+
+    <div class="row g-3">
+
+        <div class="col-6 col-md-4 col-lg-3">
+            <!-- Product Card -->
+             <div class="product-card">
+
+            <!-- Product Image -->
+            <div class="product-image-wrapper">
+
+                <img
+                    src="./images/Royal-King-Size-bed-design-Luxury-Style-scaled.webp"
+                    class="product-image"
+                    alt="Wildon Premium Sheesham Wood Bed">
+
+            </div>
+
+
+            <!-- Product Details -->
+            <div class="product-body">
+
+                <!-- Product Name -->
+                <div class="product-title">
+                    Wildon Premium Sheesham Wood Bed with
+                    Cushioned Headboard and Drawer Storage
+                </div>
+
+
+                <!-- Rating -->
+                <div class="d-flex align-items-center mb-2">
+
+                    <span class="rating">
+                        ★★★★★
+                    </span>
+
+                    <span class="rating-count">
+                        (77)
+                    </span>
+
+                </div>
+
+
+                <!-- Price -->
+                <div class="d-flex align-items-center gap-2">
+
+                    <span class="price">
+                        ₹59,999
+                    </span>
+
+                    <span class="old-price">
+                        ₹1,33,999
+                    </span>
+
+                    <span class="discount">
+                        55% OFF
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+            <!-- Product Card --><div class="product-card">
+
+            <!-- Product Image -->
+            <div class="product-image-wrapper">
+
+                <img
+                    src="./images/images.jpg"
+                    class="product-image"
+                    alt="Wildon Premium Sheesham Wood Bed">
+
+            </div>
+
+
+            <!-- Product Details -->
+            <div class="product-body">
+
+                <!-- Product Name -->
+                <div class="product-title">
+                    Wildon Premium Sheesham Wood Bed with
+                    Cushioned Headboard and Drawer Storage
+                </div>
+
+
+                <!-- Rating -->
+                <div class="d-flex align-items-center mb-2">
+
+                    <span class="rating">
+                        ★★★★★
+                    </span>
+
+                    <span class="rating-count">
+                        (77)
+                    </span>
+
+                </div>
+
+
+                <!-- Price -->
+                <div class="d-flex align-items-center gap-2">
+
+                    <span class="price">
+                        ₹59,999
+                    </span>
+
+                    <span class="old-price">
+                        ₹1,33,999
+                    </span>
+
+                    <span class="discount">
+                        55% OFF
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+            <!-- Product Card --><div class="product-card">
+
+            <!-- Product Image -->
+            <div class="product-image-wrapper">
+
+                <img
+                    src="./images/1000012091805-1000012091804_01-2100.jpg"
+                    class="product-image"
+                    alt="Wildon Premium Sheesham Wood Bed">
+
+            </div>
+
+
+            <!-- Product Details -->
+            <div class="product-body">
+
+                <!-- Product Name -->
+                <div class="product-title">
+                    Wildon Premium Sheesham Wood Bed with
+                    Cushioned Headboard and Drawer Storage
+                </div>
+
+
+                <!-- Rating -->
+                <div class="d-flex align-items-center mb-2">
+
+                    <span class="rating">
+                        ★★★★★
+                    </span>
+
+                    <span class="rating-count">
+                        (77)
+                    </span>
+
+                </div>
+
+
+                <!-- Price -->
+                <div class="d-flex align-items-center gap-2">
+
+                    <span class="price">
+                        ₹59,999
+                    </span>
+
+                    <span class="old-price">
+                        ₹1,33,999
+                    </span>
+
+                    <span class="discount">
+                        55% OFF
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+            <!-- Product Card --><div class="product-card">
+
+            <!-- Product Image -->
+            <div class="product-image-wrapper">
+
+                <img
+                    src="./images/Black-base-PVD-coated-white-marble-top-center-table.jpg"
+                    class="product-image"
+                    alt="Wildon Premium Sheesham Wood Bed">
+
+            </div>
+
+
+            <!-- Product Details -->
+            <div class="product-body">
+
+                <!-- Product Name -->
+                <div class="product-title">
+                    Wildon Premium Sheesham Wood Bed with
+                    Cushioned Headboard and Drawer Storage
+                </div>
+
+
+                <!-- Rating -->
+                <div class="d-flex align-items-center mb-2">
+
+                    <span class="rating">
+                        ★★★★★
+                    </span>
+
+                    <span class="rating-count">
+                        (77)
+                    </span>
+
+                </div>
+
+
+                <!-- Price -->
+                <div class="d-flex align-items-center gap-2">
+
+                    <span class="price">
+                        ₹59,999
+                    </span>
+
+                    <span class="old-price">
+                        ₹1,33,999
+                    </span>
+
+                    <span class="discount">
+                        55% OFF
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+
+    </div>
+
+</div>
+
+   <!-- 2nd section ends here -->
+    <!-- video section starts from here  -->
+     <div class="container py-5">
+    <h2 class="text-center mb-4">Furniture Collection Videos</h2>
+
+    <div class="row g-3">
+
+        <!-- Large Video -->
+        <div class="col-md-6">
+            <div class="video-card large-video">
+                <video autoplay muted loop playsinline>
+                    <source src="./images/video3.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <!-- Right Side Videos -->
+        <div class="col-md-6">
+            <div class="row g-3">
+
+                <div class="col-6">
+                    <div class="video-card small-video">
+                        <video autoplay muted loop playsinline>
+                            <source src="./images/video1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="video-card small-video">
+                        <video autoplay muted loop playsinline>
+                            <source src="./images/video2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="video-card small-video">
+                        <video autoplay muted loop playsinline>
+                            <source src="./images/video4.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+     <!-- video sections ends here -->
+<!-- 3rd section start from here -->
+ <section class="news-section">
+
+    <div class="container-fluid">
+
+        <div class="row g-4">
+
+            <!-- LEFT -->
+            <div class="col-lg-6">
+
+                <h2 class="news-title mb-1">
+                    Wooden Street In the News
+                </h2>
+
+                <p class="mb-0">
+                    Discover how we’re making headlines
+                </p>
+
+                <div class="news-line"></div>
+
+                <!-- Logos -->
+                <div class="row row-cols-4 g-3">
+
+                    <div class="col logo">livemint</div>
+                    <div class="col logo">YOURSTORY</div>
+                    <div class="col logo">facebook.</div>
+                    <div class="col logo">ZEE NEWS</div>
+
+                    <div class="col logo">INDIA TODAY</div>
+                    <div class="col logo">ABP LIVE</div>
+                    <div class="col logo">yahoo!news</div>
+                    <div class="col logo">GoodHomes</div>
+
+                    <div class="col logo">BusinessLine</div>
+                    <div class="col logo">moneycontrol</div>
+                    <div class="col logo">ZEEBUSINESS</div>
+
+                </div>
+
+                <a href="#" class="media-btn">
+                    View All Media →
+                </a>
+
+            </div>
+
+
+            <!-- RIGHT -->
+            <div class="col-lg-6">
+
+                <div class="row g-3">
+
+                    <!-- CARD 1 -->
+                    <div class="col-md-6">
+
+                        <div class="news-card">
+
+                            <img src="images/FN4156.jpg"
+                                 alt="100 Stores">
+
+                            <h3>
+                                Wooden Street Achieves the Milestone
+                                of having Successful 100 Stores
+                            </h3>
+
+                            <p>
+                                Wooden Street, India’s leading omnichannel
+                                brand for premium furniture and home décor,
+                                is proud to announce the opening of its 100th
+                                store in the City of Lakes, Udaipur.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CARD 2 -->
+                    <div class="col-md-6">
+
+                        <div class="news-card">
+
+                            <img src="images/sarafblogbb-ezgif.com-jpg-to-webp-converter_53959ad2-8b12-4423-95d8-a8312caecc55_2048x.webp"
+                                 alt="Penguin Sleep">
+
+                            <h3>
+                                Wooden Street Diversifies With Penguin
+                                Sleep Mattress Brand Launch
+                            </h3>
+
+                            <p>
+                                Home furniture and furnishing brand Wooden
+                                Street has announced the launch of its new
+                                in-house vertical, Penguin Sleep, marking
+                                the brand’s entry into the sleep solutions
+                                segment.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+ <!-- 3rd section ends here -->
+        <!-- footer starts from here  -->
+         <!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-danger">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>VIBE & SPACE
+          </h6>
+          <p>
+            Discover stylish and comfortable furniture designed to bring elegance, quality, and warmth to every corner of your home.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Couchs</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Dining Sets</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Wardrobes</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Cabinates</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Settings</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i>AHMEDABAD-GJ-INDIA</p>
+          <p> 
+            <i class="fas fa-envelope me-3"></i>
+            hamzahshaikh4412@gmail.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 91 79904 23706</p>
+          <p><i class="fas fa-print me-3"></i> + 91 73835 78887</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2026 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">VIBE & SPACE.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+         <!-- footer ends here -->
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous">
+</script>
+</html>
