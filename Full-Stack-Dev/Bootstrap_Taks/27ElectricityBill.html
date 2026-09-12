@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 27 Electricity Bill</title>
+</head>
+<body>
+    <h1>Task 27 Electricity Bill</h1>
+    <script>
+        let units = 250;
+        let bill;
+        if (units <= 100) {
+            bill = units * 5;
+        } else if (units <= 200) {
+            bill = units * 7;
+        } else {
+            bill = units * 10;
+        }
+        document.write("Units Consumed: " + units + "<br>");
+        document.write("Total Electricity Bill: ₹" + bill);
+    </script>
+</body>
+</html>
