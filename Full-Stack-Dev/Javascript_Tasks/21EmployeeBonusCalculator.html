@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 30 - Employee Bonus Calculator</title>
+</head>
+<body>
+<h1> Task 30 Employee Bonus Calculator</h1>
+<script>
+    let salary = 50000;
+    let experience = 4;
+    let rating = 8;
+
+    let bonusPercentage = 0;
+
+    if (experience >= 5 && rating >= 8) {
+        bonusPercentage = 20;
+    } else if (experience >= 3 && rating >= 7) {
+        bonusPercentage = 15;
+    } else if (experience >= 1 && rating >= 6) {
+        bonusPercentage = 10;
+    } else {
+        bonusPercentage = 0;
+    }
+
+    let bonusAmount = (salary * bonusPercentage) / 100;
+    let finalSalary = salary + bonusAmount;
+
+    document.write("Salary: ₹" + salary + "<br>");
+    document.write("Bonus Percentage: " + bonusPercentage + "%<br>");
+    document.write("Bonus Amount: ₹" + bonusAmount + "<br>");
+    document.write("Final Salary: ₹" + finalSalary);
+</script>
+
+</body>
+</html>

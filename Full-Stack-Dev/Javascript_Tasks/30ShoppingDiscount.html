@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 29 - Shopping Discount</title>
+</head>
+<body>
+<h1>Task 29 Shopping Discount</h1>
+<script>
+    let purchaseAmount = 12000;
+    let isMember = true;
+
+    let discountPercentage = 0;
+
+    if (purchaseAmount >= 10000) {
+        discountPercentage = 20;
+    } else if (purchaseAmount >= 5000) {
+        discountPercentage = 10;
+    }
+
+    if (isMember) {
+        discountPercentage += 5;
+    }
+
+    let discountAmount = (purchaseAmount * discountPercentage) / 100;
+    let finalAmount = purchaseAmount - discountAmount;
+
+    document.write("Original Amount: ₹" + purchaseAmount + "<br>");
+    document.write("Discount Percentage: " + discountPercentage + "%<br>");
+    document.write("Discount Amount: ₹" + discountAmount + "<br>");
+    document.write("Final Amount: ₹" + finalAmount);
+</script>
+
+</body>
+</html>
