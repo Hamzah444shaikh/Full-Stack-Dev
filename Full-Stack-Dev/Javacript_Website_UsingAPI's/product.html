@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | RangRiwaaz</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background: #fffaf5;
+            color: #3d2630;
+            font-family: Arial, sans-serif;
+        }
+
+        .product-navbar {
+            background: #741a38;
+            color: white;
+            padding: 18px 0;
+        }
+
+        .brand {
+            color: #fff;
+            font-size: 27px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .product-section {
+            padding: 60px 0;
+        }
+
+        .product-image-box {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #eadbdc;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-title {
+            color: #741a38;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .product-price {
+            color: #a66b20;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            line-height: 1.8;
+            color: #66545a;
+        }
+
+        .quantity-btn {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #741a38;
+            background: white;
+            color: #741a38;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+
+        .quantity-number {
+            display: inline-block;
+            width: 45px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .add-cart-btn {
+            background: #741a38;
+            color: white;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+
+        .add-cart-btn:hover {
+            background: #541027;
+            color: white;
+        }
+
+        .back-btn {
+            color: #741a38;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #message {
+            color: #287545;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .product-image {
+                height: 300px;
+            }
+
+            .product-section {
+                padding: 30px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+   <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <i class="bi bi-stars"></i>
+        Discover Your Perfect Bag | Free Shipping on Orders Above ₹999
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg main-navbar">
+        <div class="container">
+
+            <!-- Brand Logo -->
+            <a href="#" class="navbar-brand d-flex align-items-center gap-2 me-lg-4">
+                <div class="brand-logo">
+                    <i class="bi bi-flower1"></i>
+                </div>
+
+                <div>
+                    <div class="brand-name">RangRiwaaz</div>
+                    <div class="brand-tagline">
+                        INDIAN ELEGANCE · EVERYDAY LUXURY
+                    </div>
+                </div>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+                <!-- Desktop Search -->
+                <form class="search-box d-none d-lg-flex flex-grow-1 mx-lg-4"
+                      role="search"
+                      action="#">
+                    <input class="form-control"
+                           type="search"
+                           placeholder="Search handbags, clutches, sling bags..."
+                           aria-label="Search products">
+
+                    <button type="submit" aria-label="Search">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+
+                <!-- User Actions -->
+                <div class="d-flex align-items-center gap-3 gap-xl-4 ms-lg-auto mt-3 mt-lg-0">
+
+                    <a href="#" class="nav-action">
+                        <i class="bi bi-person"></i>
+                        <span class="d-none d-xl-inline">Account</span>
+                    </a>
+
+                    <a href="#" class="nav-action">
+                        <i class="bi bi-heart"></i>
+                        <span class="d-none d-xl-inline">Wishlist</span>
+                    </a>
+
+                    <a href="cart.html" class="nav-action">
+    <span class="bag-icon">
+        <i class="bi bi-bag"></i>
+        <span class="cart-count">0</span>
+    </span>
+    <span class="d-none d-xl-inline">Bag</span>
+</a>
+
+                </div>
+
+                <!-- Mobile Search -->
+                <form class="search-box d-flex d-lg-none mobile-search"
+                      role="search"
+                      action="#">
+                    <input class="form-control"
+                           type="search"
+                           placeholder="Search your favourite bags..."
+                           aria-label="Search products">
+
+                    <button type="submit" aria-label="Search">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="product-section">
+        <div class="container">
+
+            <a href="index.html" class="back-btn">
+                ← Back to Shopping
+            </a>
+
+            <div class="row g-4 mt-3 align-items-center">
+
+                <div class="col-md-6">
+                    <div class="product-image-box">
+                        <div id="loading">Loading product...</div>
+                        <img id="productImage"
+                             class="product-image d-none"
+                             alt="Product image">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="product-info">
+
+                        <p class="text-uppercase"
+                           style="color:#a66b20; letter-spacing:2px;">
+                            RANGRIWAAZ COLLECTION
+                        </p>
+
+                        <h1 class="product-title" id="productTitle">
+                            Loading...
+                        </h1>
+
+                        <p class="product-price" id="productPrice"></p>
+
+                        <p class="product-description"
+                           id="productDescription"></p>
+
+                        <p>
+                            <strong>Category:</strong>
+                            <span id="productCategory"></span>
+                        </p>
+
+                        <hr>
+
+                        <h6 class="fw-bold">Select Quantity</h6>
+
+                        <div class="d-flex align-items-center gap-2 mb-4">
+                            <button class="quantity-btn"
+                                    onclick="changeQuantity(-1)">−</button>
+
+                            <span class="quantity-number"
+                                  id="quantity">1</span>
+
+                            <button class="quantity-btn"
+                                    onclick="changeQuantity(1)">+</button>
+                        </div>
+
+                        <button class="add-cart-btn"
+                                onclick="addToCart()">
+                            <i class="bi bi-bag"></i>
+                            Add to Cart
+                        </button>
+
+                        <p id="message"></p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let product = null;
+        let quantity = 1;
+
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get("id");
+        function updateCartCount() {
+    let cart = JSON.parse(
+        localStorage.getItem("rangriwaazCart")
+    ) || [];
+
+    let totalQuantity = cart.reduce(
+        (total, item) => total + item.quantity, 0
+    );
+
+    document.querySelectorAll(".cart-count").forEach(element => {
+        element.textContent = totalQuantity;
+    });
+}
+
+updateCartCount();
+
+        function changeQuantity(change) {
+            quantity = quantity + change;
+
+            if (quantity < 1) {
+                quantity = 1;
+            }
+
+            if (quantity > 10) {
+                quantity = 10;
+            }
+
+            document.getElementById("quantity").textContent = quantity;
+        }
+
+        if (!productId || isNaN(Number(productId))) {
+            document.getElementById("loading").textContent =
+                "Invalid product. Please return to shopping.";
+        } else {
+            fetch("https://fakestoreapi.com/products/" + productId)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Product not found");
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    product = data;
+
+                    document.getElementById("loading").classList.add("d-none");
+
+                    const image = document.getElementById("productImage");
+                    image.src = product.image;
+                    image.alt = product.title;
+                    image.classList.remove("d-none");
+
+                    document.getElementById("productTitle").textContent =
+                        product.title;
+
+                    document.getElementById("productPrice").textContent =
+                        "₹" + Number(product.price).toFixed(2);
+
+                    document.getElementById("productDescription").textContent =
+                        product.description;
+
+                    document.getElementById("productCategory").textContent =
+                        product.category;
+                })
+                .catch(error => {
+                    document.getElementById("loading").textContent =
+                        "Product could not be loaded. Please try again.";
+                    console.log(error);
+                });
+        }
+
+        function addToCart() {
+            if (!product) {
+                return;
+            }
+
+            let cart = JSON.parse(localStorage.getItem("rangriwaazCart")) || [];
+
+            const existingProduct = cart.find(
+                item => item.id === product.id
+            );
+
+            if (existingProduct) {
+                existingProduct.quantity += quantity;
+            } else {
+                cart.push({
+                    id: product.id,
+                    title: product.title,
+                    price: Math.round(product.price * 85),
+                    image: product.image,
+                    quantity: quantity
+                });
+            }
+
+            localStorage.setItem("rangriwaazCart", JSON.stringify(cart));
+            updateCartCount();
+            document.getElementById("message").textContent =
+                "✓ Product added to your cart successfully!";
+        }
+    </script>
+
+</body>
+</html>

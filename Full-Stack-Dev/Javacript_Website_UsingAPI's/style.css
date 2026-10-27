@@ -1,0 +1,431 @@
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fffaf5;
+        }
+
+        /* Announcement Bar */
+        .announcement-bar {
+            background: #741a38;
+            color: white;
+            text-align: center;
+            padding: 9px 10px;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Main Navbar */
+        .main-navbar {
+            background: #fffaf5;
+            padding: 16px 0;
+            border-bottom: 1px solid #eadfd3;
+        }
+
+        /* Brand */
+        .brand-logo {
+            width: 48px;
+            height: 48px;
+            background: #741a38;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f5d9a4;
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+
+        .brand-name {
+            font-family: Georgia, serif;
+            color: #741a38;
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 1.1;
+            text-decoration: none;
+        }
+
+        .brand-tagline {
+            color: #94745f;
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            margin-top: 4px;
+        }
+
+        /* Search */
+        .search-box {
+            border: 1px solid #e3d3c4;
+            border-radius: 30px;
+            overflow: hidden;
+            background: white;
+        }
+
+        .search-box input {
+            border: none;
+            box-shadow: none !important;
+            padding: 11px 16px;
+            background: transparent;
+        }
+
+        .search-box button {
+            border: none;
+            background: transparent;
+            color: #741a38;
+            padding: 0 16px;
+        }
+
+        /* Navbar Icons */
+        .nav-action {
+            text-decoration: none;
+            color: #3e302c;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .nav-action i {
+            color: #741a38;
+            font-size: 21px;
+        }
+
+        .nav-action:hover {
+            color: #a64d32;
+        }
+
+        .bag-icon {
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -7px;
+            right: -9px;
+            background: #c18a45;
+            color: white;
+            border-radius: 50%;
+            font-size: 10px;
+            width: 17px;
+            height: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Category Navigation */
+        .category-navbar {
+            background: #fffaf5;
+            padding: 0;
+        }
+
+        .category-navbar .nav-link {
+            color: #493b34;
+            padding: 15px 19px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .category-navbar .nav-link:hover,
+        .category-navbar .nav-link.active {
+            color: #741a38;
+        }
+
+        .category-navbar .nav-link.active {
+            border-bottom: 2px solid #741a38;
+        }
+
+        .category-navbar .new-arrivals {
+            color: #a65d2d;
+            font-weight: bold;
+        }
+
+        /* Mobile */
+        @media (max-width: 991px) {
+            .brand-name {
+                font-size: 23px;
+            }
+
+            .brand-logo {
+                width: 42px;
+                height: 42px;
+            }
+
+            .mobile-search {
+                margin-top: 15px;
+            }
+
+            .category-navbar .nav-link {
+                padding: 12px 8px;
+            }
+        }
+         /* Full-width carousel */
+    #purseCarousel {
+        width: 100%;
+        overflow: hidden;
+        background: #741a38;
+    }
+
+    /* Hero images */
+    #purseCarousel .hero-image {
+        width: 100%;
+        height: 620px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Dark overlay for readable text */
+    #purseCarousel .carousel-item {
+        position: relative;
+    }
+
+    #purseCarousel .carousel-item::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            90deg,
+            rgba(25, 12, 16, 0.72) 0%,
+            rgba(25, 12, 16, 0.35) 45%,
+            rgba(25, 12, 16, 0.02) 100%
+        );
+        pointer-events: none;
+    }
+
+    /* Hero text */
+    #purseCarousel .hero-caption {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        z-index: 2;
+        color: #ffffff;
+        width: 55%;
+        text-align: left;
+    }
+
+    #purseCarousel .hero-subtitle {
+        color: #f1cf91;
+        font-size: 13px;
+        letter-spacing: 3px;
+        font-weight: 600;
+        margin-bottom: 18px;
+    }
+
+    #purseCarousel .hero-caption h1 {
+        font-family: Georgia, serif;
+        font-size: clamp(34px, 4.5vw, 64px);
+        line-height: 1.12;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    #purseCarousel .hero-caption p:not(.hero-subtitle) {
+        font-size: 17px;
+        line-height: 1.7;
+        margin-bottom: 28px;
+    }
+
+    /* CTA button */
+    #purseCarousel .hero-btn {
+        display: inline-block;
+        padding: 14px 27px;
+        background: #f1cf91;
+        color: #741a38;
+        text-decoration: none;
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        font-weight: bold;
+        border: 1px solid #f1cf91;
+        transition: 0.3s ease;
+    }
+
+    #purseCarousel .hero-btn:hover {
+        background: #741a38;
+        color: white;
+        border-color: #741a38;
+    }
+
+    /* Indicators */
+    #purseCarousel .carousel-indicators {
+        z-index: 3;
+    }
+
+    #purseCarousel .carousel-indicators button {
+        width: 28px;
+        height: 4px;
+        border: 0;
+        margin: 0 5px;
+    }
+
+    /* Smooth fade transition */
+    #purseCarousel .carousel-item {
+        transition: opacity 0.8s ease-in-out;
+    }
+
+    /* Tablet and mobile */
+    @media (max-width: 768px) {
+        #purseCarousel .hero-image {
+            height: 440px;
+        }
+
+        #purseCarousel .hero-caption {
+            left: 8%;
+            width: 78%;
+        }
+
+        #purseCarousel .hero-subtitle {
+            font-size: 10px;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        #purseCarousel .hero-caption h1 {
+            font-size: 36px;
+            margin-bottom: 14px;
+        }
+
+        #purseCarousel .hero-caption p:not(.hero-subtitle) {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        #purseCarousel .hero-btn {
+            padding: 12px 17px;
+            font-size: 10px;
+        }
+    }
+
+    @media (max-width: 400px) {
+        #purseCarousel .hero-image {
+            height: 390px;
+        }
+
+        #purseCarousel .hero-caption h1 {
+            font-size: 30px;
+        }
+
+        #purseCarousel .carousel-control-prev,
+        #purseCarousel .carousel-control-next {
+            width: 10%;
+        }
+    }
+     .collection-section {
+            padding: 60px 0;
+        }
+
+        .section-subtitle {
+            color: #a45d28;
+            font-size: 12px;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+
+        .section-title {
+            color: #741a38;
+            font-family: Georgia, serif;
+            font-size: 38px;
+            font-weight: bold;
+        }
+
+        .section-description {
+            color: #85766c;
+            font-size: 15px;
+        }
+
+        .title-line {
+            width: 65px;
+            height: 3px;
+            background-color: #c18a45;
+            margin: 18px auto;
+        }
+
+        /* Product Card */
+        .purse-card {
+            height: 100%;
+            background: #ffffff;
+            border: 1px solid #eadfd3;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .purse-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 28px rgba(116, 26, 56, 0.13);
+            border-color: #c18a45;
+        }
+
+        .purse-image {
+            height: 240px;
+            width: 100%;
+            object-fit: contain;
+            padding: 20px;
+            background-color: #fff6ed;
+        }
+
+        .purse-card .card-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .purse-card .card-title {
+            color: #741a38;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.5;
+            min-height: 48px;
+        }
+
+        .purse-card .card-text {
+            color: #82766d;
+            font-size: 13px;
+            line-height: 1.7;
+            min-height: 65px;
+        }
+
+        .purse-price {
+            color: #741a38;
+            font-size: 23px;
+            font-weight: bold;
+            margin: 12px 0 18px;
+        }
+
+        /* Button */
+        .purse-btn {
+            background-color: #741a38;
+            color: #ffffff;
+            border: 1px solid #741a38;
+            border-radius: 5px;
+            padding: 11px;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            transition: 0.3s;
+        }
+
+        .purse-btn:hover {
+            background-color: #c18a45;
+            color: #ffffff;
+            border-color: #c18a45;
+        }
+
+        /* Mobile */
+        @media (max-width: 576px) {
+            .collection-section {
+                padding: 40px 0;
+            }
+
+            .section-title {
+                font-size: 29px;
+            }
+
+            .purse-image {
+                height: 200px;
+            }
+
+            .purse-card .card-body {
+                padding: 15px;
+            }
+        }

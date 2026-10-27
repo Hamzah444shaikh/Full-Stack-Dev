@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shopping Bag | RangRiwaaz</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background: #fffaf5;
+            color: #3d2630;
+        }
+
+        .cart-section {
+            padding: 45px 0 70px;
+        }
+
+        .cart-heading {
+            color: #741a38;
+            font-weight: bold;
+        }
+
+        .cart-item {
+            background: white;
+            border: 1px solid #eadbdc;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 18px;
+        }
+
+        .cart-image {
+            width: 100%;
+            max-width: 120px;
+            height: 120px;
+            object-fit: contain;
+        }
+
+        .cart-product-title {
+            color: #741a38;
+            font-weight: bold;
+        }
+
+        .cart-price {
+            color: #a66b20;
+            font-weight: bold;
+        }
+
+        .quantity-btn {
+            background: white;
+            color: #741a38;
+            border: 1px solid #741a38;
+            border-radius: 5px;
+            width: 32px;
+            height: 32px;
+        }
+
+        .remove-btn {
+            background: none;
+            border: none;
+            color: #b42335;
+            padding: 5px 0;
+        }
+
+        .summary-box {
+            background: white;
+            border: 1px solid #eadbdc;
+            border-radius: 12px;
+            padding: 25px;
+            position: sticky;
+            top: 20px;
+        }
+
+        .summary-total {
+            color: #741a38;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .shop-btn {
+            display: inline-block;
+            background: #741a38;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+        }
+
+        .shop-btn:hover {
+            background: #541027;
+            color: white;
+        }
+
+        .empty-cart {
+            background: white;
+            padding: 45px 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Keep this navbar identical to index.html -->
+    <div class="announcement-bar">
+        <i class="bi bi-stars"></i>
+        Discover Your Perfect Bag | Free Shipping on Orders Above ₹999
+    </div>
+
+    <nav class="navbar navbar-expand-lg main-navbar">
+        <div class="container">
+
+            <a href="index.html"
+               class="navbar-brand d-flex align-items-center gap-2 me-lg-4">
+                <div class="brand-logo">
+                    <i class="bi bi-flower1"></i>
+                </div>
+                <div>
+                    <div class="brand-name">RangRiwaaz</div>
+                    <div class="brand-tagline">
+                        INDIAN ELEGANCE · EVERYDAY LUXURY
+                    </div>
+                </div>
+            </a>
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+                <form class="search-box d-none d-lg-flex flex-grow-1 mx-lg-4"
+                      role="search"
+                      action="#">
+                    <input class="form-control"
+                           type="search"
+                           placeholder="Search handbags, clutches, sling bags..."
+                           aria-label="Search products">
+                    <button type="submit" aria-label="Search">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+
+                <div class="d-flex align-items-center gap-3 gap-xl-4 ms-lg-auto mt-3 mt-lg-0">
+
+                    <a href="#" class="nav-action">
+                        <i class="bi bi-person"></i>
+                        <span class="d-none d-xl-inline">Account</span>
+                    </a>
+
+                    <a href="#" class="nav-action">
+                        <i class="bi bi-heart"></i>
+                        <span class="d-none d-xl-inline">Wishlist</span>
+                    </a>
+
+                    <a href="cart.html" class="nav-action">
+                        <span class="bag-icon">
+                            <i class="bi bi-bag"></i>
+                            <span class="cart-count">0</span>
+                        </span>
+                        <span class="d-none d-xl-inline">Bag</span>
+                    </a>
+
+                </div>
+
+                <form class="search-box d-flex d-lg-none mobile-search"
+                      role="search"
+                      action="#">
+                    <input class="form-control"
+                           type="search"
+                           placeholder="Search your favourite bags..."
+                           aria-label="Search products">
+                    <button type="submit" aria-label="Search">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <section class="cart-section">
+        <div class="container">
+
+            <h2 class="cart-heading mb-4">
+                <i class="bi bi-bag"></i> My Shopping Bag
+            </h2>
+
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div id="cartItems"></div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="summary-box">
+                        <h4 class="cart-heading mb-4">Order Summary</h4>
+
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>Total Items</span>
+                            <strong id="totalItems">0</strong>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>Subtotal</span>
+                            <strong id="subtotal">₹0.00</strong>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>Delivery</span>
+                            <strong id="delivery">₹0.00</strong>
+                        </div>
+
+                        <hr>
+
+                        <div class="d-flex justify-content-between mb-4">
+                            <span class="fw-bold">Grand Total</span>
+                            <span class="summary-total" id="grandTotal">
+                                ₹0.00
+                            </span>
+                        </div>
+
+                        <button class="shop-btn w-100 border-0"
+                                onclick="checkout()">
+                            Proceed to Checkout
+                        </button>
+
+                        <a href="index.html"
+                           class="d-block text-center mt-3"
+                           style="color:#741a38;">
+                            Continue Shopping
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        let cart = JSON.parse(
+            localStorage.getItem("rangriwaazCart")
+        ) || [];
+
+        function saveCart() {
+            localStorage.setItem(
+                "rangriwaazCart",
+                JSON.stringify(cart)
+            );
+        }
+
+        function formatPrice(price) {
+            return "₹" + Number(price).toFixed(2);
+        }
+
+        function updateCartCount() {
+            const totalQuantity = cart.reduce(
+                (total, item) => total + Number(item.quantity), 0
+            );
+
+            document.querySelectorAll(".cart-count").forEach(element => {
+                element.textContent = totalQuantity;
+            });
+        }
+
+        function renderCart() {
+            const cartItems = document.getElementById("cartItems");
+            cartItems.innerHTML = "";
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = `
+                    <div class="empty-cart">
+                        <i class="bi bi-bag-x"
+                           style="font-size:50px;color:#741a38;"></i>
+                        <h4 class="mt-3">Your bag is empty</h4>
+                        <p>Discover something beautiful for your collection.</p>
+                        <a href="index.html" class="shop-btn">
+                            Start Shopping
+                        </a>
+                    </div>
+                `;
+            }
+
+            let subtotal = 0;
+            let totalItems = 0;
+
+            cart.forEach((item, index) => {
+                const price = Number(item.price) || 0;
+                const quantity = Number(item.quantity) || 1;
+                const itemTotal = price * quantity;
+
+                subtotal += itemTotal;
+                totalItems += quantity;
+
+                cartItems.innerHTML += `
+                    <div class="cart-item">
+                        <div class="row align-items-center g-3">
+
+                            <div class="col-4 col-md-3 text-center">
+                                <img src="${item.image}"
+                                     class="cart-image"
+                                     alt="Product image">
+                            </div>
+
+                            <div class="col-8 col-md-9">
+                                <h5 class="cart-product-title">
+                                    ${escapeHTML(item.title)}
+                                </h5>
+
+                                <p class="cart-price mb-2">
+                                    ${formatPrice(price)}
+                                </p>
+
+                                <div class="d-flex align-items-center gap-2">
+                                    <button class="quantity-btn"
+                                            onclick="changeQuantity(${index}, -1)">
+                                        −
+                                    </button>
+
+                                    <span>${quantity}</span>
+
+                                    <button class="quantity-btn"
+                                            onclick="changeQuantity(${index}, 1)">
+                                        +
+                                    </button>
+                                </div>
+
+                                <p class="mt-2 mb-1">
+                                    Item total:
+                                    <strong>${formatPrice(itemTotal)}</strong>
+                                </p>
+
+                                <button class="remove-btn"
+                                        onclick="removeProduct(${index})">
+                                    <i class="bi bi-trash"></i> Remove
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Free delivery for this demo cart
+            const delivery = 0;
+            const grandTotal = subtotal + delivery;
+
+            document.getElementById("totalItems").textContent = totalItems;
+            document.getElementById("subtotal").textContent =
+                formatPrice(subtotal);
+            document.getElementById("delivery").textContent =
+                formatPrice(delivery);
+            document.getElementById("grandTotal").textContent =
+                formatPrice(grandTotal);
+
+            updateCartCount();
+        }
+
+        function escapeHTML(text) {
+            return String(text).replace(/[&<>"']/g, character => ({
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#039;"
+            })[character]);
+        }
+
+        function changeQuantity(index, change) {
+            cart[index].quantity += change;
+
+            if (cart[index].quantity <= 0) {
+                cart.splice(index, 1);
+            }
+
+            saveCart();
+            renderCart();
+        }
+
+        function removeProduct(index) {
+            cart.splice(index, 1);
+            saveCart();
+            renderCart();
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert("Your shopping bag is empty!");
+                return;
+            }
+
+            alert("Your cart is ready! Checkout functionality can be added next.");
+        }
+
+        renderCart();
+    </script>
+
+</body>
+</html>
